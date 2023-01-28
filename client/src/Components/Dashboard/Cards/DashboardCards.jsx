@@ -1,5 +1,6 @@
 import React from "react";
 import "./DashboardCards.css";
+import { Link } from "react-router-dom";
 const DashBoardCards = () => {
   return (
     <div className="dashboard-cards-container">
@@ -32,7 +33,9 @@ const DashBoardCards = () => {
             />
           </div>
           <div className="dashboard-action-btn">
-            <button >Start puzzle session</button>
+            <Link to="/cards">
+              <button>Start puzzle session</button>
+            </Link>
           </div>
         </div>
       </div>

@@ -4,7 +4,7 @@ import styles from "./stylePuzzle.scss";
 import { ToastContainer, toast } from "react-toastify";
 import { Button, Text } from "@nextui-org/react";
 import "./style.css";
-import TaskSequence from "./TaskSequence";
+import CardGame from "./CardGame";
 const SliderPuzzle = () => {
   const [success, setSuccess] = useState(false);
   const [count, setCount] = useState(0);
@@ -77,7 +77,7 @@ const SliderPuzzle = () => {
           </div>
         </div>
       )}
-      {next && <TaskSequence />}
+      {next && <CardGame />}
     </div>
   );
 };

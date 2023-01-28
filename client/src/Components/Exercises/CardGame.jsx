@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
-import Card from "./Card";
+import MemoryCard from "./MemoryCard";
+import "./Card.css";
+import { Text } from "@nextui-org/react";
 
 const difficultSet = [
   { id: 1, img: "/img/html.png", stat: "" },
@@ -21,14 +23,15 @@ const difficultSet = [
 ];
 
 const easySet = [
-  { id: 1, img: "/img/html.png", stat: "" },
-  { id: 1, img: "/img/html.png", stat: "" },
-  { id: 2, img: "/img/css.png", stat: "" },
-  { id: 2, img: "/img/css.png", stat: "" },
+  { id: 1, img: "../../img/html.png", stat: "" },
+  { id: 1, img: "../../img/html.png", stat: "" },
+  { id: 2, img: "../../img/css.png", stat: "" },
+  { id: 2, img: "../../img/css.png", stat: "" },
 ];
 let finalCardSet = [];
 
 function CardGame({ level }) {
+  console.log("card idhar");
   const [clicks, setTotalClicks] = useState(0);
   const [correct, setCorrect] = useState(0);
   const [isGameComplete, setIsGameComplete] = useState(false);
@@ -92,18 +95,41 @@ function CardGame({ level }) {
   const incorrectAttempts = clicks / 2 - correct;
 
   if (isGameComplete) {
-    return <div>No of incorrect attempts : {incorrectAttempts} </div>;
+    return (
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <Text h3 color="warning">
+          No of incorrect attempts : {incorrectAttempts}{" "}
+        </Text>
+      </div>
+    );
   }
   return (
-    <div
-      className={`container ${
-        level === 1 ? "condition-small" : "condition-big"
-      }`}
-    >
-      {items.map((item, index) => (
-        <Card key={index} item={item} id={index} handleClick={handleClick} />
-      ))}
-    </div>
+    <>
+      <Text h1 size={60} color="secondary" weight="bold">
+        Enhance your memory
+      </Text>
+      <div
+        className={`container ${
+          level === 1 ? "condition-small" : "condition-big"
+        }`}
+      >
+        {items?.map((item, index) => (
+          <MemoryCard
+            key={index}
+            item={item}
+            id={index}
+            handleClick={handleClick}
+            img={item.img}
+          />
+        ))}
+      </div>
+    </>
   );
 }
 

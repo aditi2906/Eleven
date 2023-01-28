@@ -9,24 +9,22 @@ const Dashboard = () => {
   return (
     <div>
       <NavbarHeader />
-      <div class="container">
-        <div className="dashboardBody">
-          <div class="chart">
-            <Chart />
-          </div>
-          <div class="followerCard">
-            <Social />
-          </div>
+      <div className="dashboardBody">
+        <div class="chart">
+          <Chart />
         </div>
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            height: "50%",
-          }}
-        >
-          <DashBoardCards />
+        <div class="followerCard">
+          <Social />
         </div>
+      </div>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          height: "50%",
+        }}
+      >
+        <DashBoardCards />
       </div>
     </div>
   );
