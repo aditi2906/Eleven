@@ -1,4 +1,4 @@
-.cards-container {
+.dashboard-cards-container {
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -6,7 +6,7 @@
   padding: 1.4rem;
 }
 
-.card {
+.dashboard-card {
   font-weight: bold;
   background-color: rgb(78, 93, 165);
   color: white;
@@ -19,7 +19,7 @@
   height: 50%;
 }
 
-.badge {
+.dashboard-badge {
   padding: 0.4rem;
   background-color: rgba(133, 153, 234, 0.993);
   border-radius: 10px;
@@ -27,17 +27,17 @@
   margin: 0.5rem auto;
 }
 
-.action-cards {
+.dashboard-action-cards {
   display: flex;
   flex-direction: row;
   gap: 2rem;
 }
 @media only screen and (max-width: 600px) {
-  .action-cards {
+  .dashboard-action-cards {
     flex-direction: column;
   }
 }
-.action-card {
+.dashboard-action-card {
   flex: 1;
   -webkit-box-shadow: 10px 10px 53px -22px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 10px 10px 53px -22px rgba(0, 0, 0, 0.75);
@@ -46,11 +46,11 @@
   overflow: hidden;
 }
 
-.action-card .action-btn {
+.dashboard-action-card .dashboard-action-btn {
   padding: 1rem;
 }
 
-.action-btn button {
+.dashboard-action-btn button {
   outline: transparent;
   border-radius: 10px;
   padding: 0.7rem;
@@ -64,6 +64,6 @@
   box-shadow: 10px 10px 53px -22px rgba(0, 0, 0, 0.75);
 }
 
-.img img {
+.dashboard-img .dashboard-img {
   max-width: 100%;
 }

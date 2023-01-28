@@ -1,5 +1,5 @@
 import React from "react";
-import NavbarHeader from "../Navbar/Navbar";
+import NavbarHeader from "../Navbar/NavbarHeader";
 import Chart from "./Chart/Chart";
 import "./Dashboard.css";
 import DashBoardCards from "./Cards/DashboardCards";
@@ -7,14 +7,9 @@ import Social from "./Social/Social";
 
 const Dashboard = () => {
   return (
-    <div
-      style={{
-        display: "flex",
-        flexDirection: "column",
-      }}
-    >
+    <div>
       <NavbarHeader />
-      <div>
+      <div class="container">
         <div className="dashboardBody">
           <div class="chart">
             <Chart />
@@ -26,7 +21,6 @@ const Dashboard = () => {
         <div
           style={{
             display: "flex",
-            alignItems: "center",
             justifyContent: "center",
             height: "50%",
           }}
