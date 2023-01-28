@@ -22,7 +22,9 @@ const DashBoardCards = () => {
             />
           </div>
           <div className="dashboard-action-btn">
-            <button>Schedule a session</button>
+            <Link to="http://localhost:3030/">
+              <button>Schedule a session</button>
+            </Link>
           </div>
         </div>
         <div className="dashboard-action-card">
