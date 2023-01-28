@@ -37,7 +37,7 @@ button:active {
     grid-auto-rows: 100px; */
 }
 
-canvas {
+.output_canvas {
   flex: none;
   border: solid 1px;
   margin: auto;

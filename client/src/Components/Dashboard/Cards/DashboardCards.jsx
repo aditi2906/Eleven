@@ -33,7 +33,7 @@ const DashBoardCards = () => {
             />
           </div>
           <div className="dashboard-action-btn">
-            <Link to="/cards">
+            <Link to="/puzzle">
               <button>Start puzzle session</button>
             </Link>
           </div>

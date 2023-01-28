@@ -2,6 +2,9 @@ import { useState, useEffect } from "react";
 import MemoryCard from "./MemoryCard";
 import "./Card.css";
 import { Text } from "@nextui-org/react";
+import { Navigate } from "react-router-dom";
+import { Toast } from "react-toastify/dist/components";
+import { toast } from "react-toastify";
 
 const difficultSet = [
   { id: 1, img: "/img/html.png", stat: "" },
@@ -104,7 +107,7 @@ function CardGame({ level }) {
         }}
       >
         <Text h3 color="warning">
-          No of incorrect attempts : {incorrectAttempts}{" "}
+          <Navigate to="/" />
         </Text>
       </div>
     );
