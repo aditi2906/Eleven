@@ -73,8 +73,9 @@ function Chart() {
       style={{
         padding: "20px",
         boxShadow:
-          "inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(255, 255, 255),0.3em 0.3em 1em rgba(0, 0, 0, 0.3)",
+          "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)",
         borderRadius: "20px",
+        alignSelf: "stretch",
       }}
     >
       <Line data={data}>Hello</Line>

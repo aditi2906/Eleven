@@ -1,7 +1,7 @@
 import { React } from "react";
 import "./FollowersCard.css";
 import User from "./User";
-import { Followers } from "../../Data/followerData";
+import { Followers } from "../../../Data/followerData";
 const Social = () => {
   return (
     <div className="FollowersCard">
