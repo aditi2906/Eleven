@@ -28,19 +28,24 @@ const easySet = [
 ];
 let finalCardSet = [];
 
-function Cards({ level }) {
+function CardGame({ level }) {
   const [clicks, setTotalClicks] = useState(0);
   const [correct, setCorrect] = useState(0);
   const [isGameComplete, setIsGameComplete] = useState(false);
   console.log(correct);
-  const [items, setItems] = useState(finalCardSet.sort(() => Math.random() - 0.5));
+  const [items, setItems] = useState(
+    finalCardSet.sort(() => Math.random() - 0.5)
+  );
 
   finalCardSet = level === 1 ? easySet : difficultSet;
   useEffect(() => {
     setItems(finalCardSet);
   }, [level]);
 
-  if ((!isGameComplete && level === 1 && correct === 2) || (level === 2 && correct === 8)) {
+  if (
+    (!isGameComplete && level === 1 && correct === 2) ||
+    (level === 2 && correct === 8)
+  ) {
     // alert("game completed");
     setIsGameComplete(true);
     // return;
@@ -90,7 +95,11 @@ function Cards({ level }) {
     return <div>No of incorrect attempts : {incorrectAttempts} </div>;
   }
   return (
-    <div className={`container ${level === 1 ? "condition-small" : "condition-big"}`}>
+    <div
+      className={`container ${
+        level === 1 ? "condition-small" : "condition-big"
+      }`}
+    >
       {items.map((item, index) => (
         <Card key={index} item={item} id={index} handleClick={handleClick} />
       ))}
@@ -98,4 +107,4 @@ function Cards({ level }) {
   );
 }
 
-export default Cards;
+export default CardGame;
