@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const express = require('express')
 const mongoose = require('mongoose')
 const cors = require('cors')
@@ -51,3 +52,22 @@ app.post('/score', async (req, res) => {
 app.listen(4000, () => {
   console.log('started on port 4000')
 })
+=======
+const express = require('express');
+const path = require('path');
+
+const app = express();
+app.set('view engine', 'html');
+app.set("locale", "en");
+app.use(express.json({ limit: '50mb' }));
+app.use(express.urlencoded({ limit: '50mb', extended: true }));
+app.use(express.static(__dirname + '/public'));
+
+app.get('/', async (req, res) => {
+    res.sendFile(path.join(__dirname+'/index.html'))
+})
+
+app.listen('3001', () => {
+    console.log("server running on port 3001")
+})
+>>>>>>> d0efdac6deff6e50abdcd65deb53e107de8f9073

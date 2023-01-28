@@ -1,0 +1,69 @@
+.cards-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 50%;
+  padding: 1.4rem;
+}
+
+.card {
+  font-weight: bold;
+  background-color: rgb(78, 93, 165);
+  color: white;
+  font-size: large;
+  padding: 1.3rem;
+  border-radius: 15px;
+  -webkit-box-shadow: 10px 10px 53px -22px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 53px -22px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 10px 53px -22px rgba(0, 0, 0, 0.75);
+  height: 50%;
+}
+
+.badge {
+  padding: 0.4rem;
+  background-color: rgba(133, 153, 234, 0.993);
+  border-radius: 10px;
+  width: 30%;
+  margin: 0.5rem auto;
+}
+
+.action-cards {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+@media only screen and (max-width: 600px) {
+  .action-cards {
+    flex-direction: column;
+  }
+}
+.action-card {
+  flex: 1;
+  -webkit-box-shadow: 10px 10px 53px -22px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 53px -22px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 10px 53px -22px rgba(0, 0, 0, 0.75);
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.action-card .action-btn {
+  padding: 1rem;
+}
+
+.action-btn button {
+  outline: transparent;
+  border-radius: 10px;
+  padding: 0.7rem;
+  border: none;
+  font-weight: bold;
+  background-color: blueviolet;
+  color: #fff;
+
+  -webkit-box-shadow: 10px 10px 53px -22px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 53px -22px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 10px 53px -22px rgba(0, 0, 0, 0.75);
+}
+
+.img img {
+  max-width: 100%;
+}

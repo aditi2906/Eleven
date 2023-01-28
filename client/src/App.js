@@ -1,7 +1,5 @@
 import "./App.css";
 import { Button, Input } from "@nextui-org/react";
-import {useState} from "react"
-// import Form from "./LoginForm";
 function App() {
   const [phone, setPhone] = useState(0)
   const [password, setPassword] = useState('')
@@ -30,21 +28,9 @@ function App() {
           placeholder="813123XXXX"
           width="300px"
           type="number"
-          onChange={e => setPhone(e.target.value)}
-          
+          up
         />
-        <Input
-          className="shadow-sm text-xl"
-          label="Enter Password"
-          clearable={true}
-          placeholder="XXXXXXXX"
-          width="300px"
-          type="password"
-          onChange={e => setPassword(e.target.value)}
-          
-        />
-        <Button onPress={handleSubmit} >Login</Button>
-        {/* <Form></Form> */}
+        <Button>Sign in</Button>
       </div>
     </main>
   );
