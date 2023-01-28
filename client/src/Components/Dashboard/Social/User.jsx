@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 const User = ({ person }) => {
+  const [follow, setFollow] = useState(false);
   return (
     <div className="follower">
       <div>
@@ -9,7 +10,9 @@ const User = ({ person }) => {
           <span>{person.username}</span>
         </div>
       </div>
-      <button className={"button fc-button"}>follow</button>
+      <button className={"button fc-button"} onClick={() => setFollow(!follow)}>
+        {follow ? <>unfollow</> : <>follow</>}
+      </button>
     </div>
   );
 };

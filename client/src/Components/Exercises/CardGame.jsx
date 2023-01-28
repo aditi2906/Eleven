@@ -3,6 +3,8 @@ import MemoryCard from "./MemoryCard";
 import "./Card.css";
 import { Text } from "@nextui-org/react";
 import { Navigate } from "react-router-dom";
+import Alert from "@mui/material/Alert";
+import Fade from "@mui/material/Fade";
 
 const difficultSet = [
   { id: 1, img: "/img/html.png", stat: "" },
@@ -35,6 +37,7 @@ function CardGame({ level }) {
   console.log("card idhar");
   const [clicks, setTotalClicks] = useState(0);
   const [correct, setCorrect] = useState(0);
+  const [alertVisibility, setAlertVisibility] = useState(false);
   const [isGameComplete, setIsGameComplete] = useState(false);
   console.log(correct);
   const [items, setItems] = useState(
@@ -106,6 +109,7 @@ function CardGame({ level }) {
       >
         <Text h3 color="warning">
           <Navigate to="/" />
+          {alert("No of incorrectAttempts:", { incorrectAttempts })}
         </Text>
       </div>
     );
