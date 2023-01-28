@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { Vertify } from "@alex_xu/react-slider-vertify";
-import { ToastContainer, toast } from "react-toastify";
 import { Button, StyledButton, Text } from "@nextui-org/react";
 import { Link } from "react-router-dom";
 import "./style.css";
