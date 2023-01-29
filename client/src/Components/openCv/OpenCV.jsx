@@ -4,7 +4,11 @@ const OpenCV = () => {
     <div id="main">
       <video class="input_video"></video>
       <div id="draw_area">
-        <canvas className="output_canvas" width="1280px" height="720px"></canvas>
+        <canvas
+          className="output_canvas"
+          width="1280px"
+          height="720px"
+        ></canvas>
         <div id="side">
           <button id="clear_button" className="side_button" type="button">
             Clear Board{" "}

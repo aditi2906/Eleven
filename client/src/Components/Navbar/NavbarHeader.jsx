@@ -19,12 +19,10 @@ const NavbarHeader = () => {
         </Text>
       </Navbar.Brand>
       <Navbar.Content>
-        <Navbar.Link color="inherit" href="#">
-          Login
-        </Navbar.Link>
+        <Navbar.Link color="inherit" href="#"></Navbar.Link>
         <Navbar.Item>
           <Button auto flat as={Link} href="#">
-            Sign Up
+            User
           </Button>
         </Navbar.Item>
       </Navbar.Content>

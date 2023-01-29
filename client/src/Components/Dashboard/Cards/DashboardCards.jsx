@@ -40,6 +40,20 @@ const DashBoardCards = () => {
             </Link>
           </div>
         </div>
+
+        <div className="dashboard-action-card">
+          <div className="dashboard-img">
+            <img
+              src="https://img.freepik.com/free-vector/hand-drawn-flat-design-parkinson-illustration_23-2149293345.jpg?w=740&t=st=1674957261~exp=1674957861~hmac=811f8dbf906d4aa0f81502409229fdeda9051cc1496217c55009dbab3b4d0c54"
+              alt="img"
+            />
+          </div>
+          <div className="dashboard-action-btn">
+            <Link to="/opencv">
+              <button>Motion Tuning</button>
+            </Link>
+          </div>
+        </div>
       </div>
     </div>
   );
